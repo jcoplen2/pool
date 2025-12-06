@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp8bqpi02j2m"]
+
+[ext_resource type="PackedScene" uid="uid://dng2xc5fg35bn" path="res://models/cue_ball.blend" id="1_0h1ta"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_h7qjy"]
+radius = 0.0284157
+
+[node name="BallBase" type="RigidBody3D"]
+
+[node name="cue_ball" parent="." instance=ExtResource("1_0h1ta")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_h7qjy")
